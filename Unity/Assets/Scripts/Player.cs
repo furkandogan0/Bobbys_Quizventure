@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRB;
     Animator playerAnimator;
     public float moveSpeed = 1f;
+    public float jumpSpeed = 1f;
     bool facingRight = true;
     
     // Start is called before the first frame update
@@ -32,10 +33,13 @@ public class Player : MonoBehaviour
             FlipFace();
         }
 
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            Jump();
+        }
     }
     void HorizontalMove()
     {
-
         playerRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, playerRB.velocity.y);
         playerAnimator.SetFloat("playerspeed", Mathf.Abs(playerRB.velocity.x));
     }
@@ -46,5 +50,10 @@ public class Player : MonoBehaviour
         tempLocalScale.x *= -1;
         transform.localScale = tempLocalScale;
 
+    }
+
+    void Jump()
+    {
+        playerRB.AddForce(new Vector2(0f, jumpSpeed));
     }
 }
