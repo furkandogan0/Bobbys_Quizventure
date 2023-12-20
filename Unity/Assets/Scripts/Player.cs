@@ -8,9 +8,14 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRB;
     Animator playerAnimator;
     public float moveSpeed = 1f;
-    public float jumpSpeed = 1f;
-    bool facingRight = true;
+    public float jumpSpeed = 1f, jumpFrequency = 1f, nextJumpTime;
     
+    bool facingRight = true;
+
+    public bool isGrounded = false;
+    public Transform groundCheckPosition;
+    public float groundCheckRadius;
+    public LayerMask groundCheckLayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         HorizontalMove();
+        OnGroundCheck();
 
         if (playerRB.velocity.x < 0 && facingRight)
         {
@@ -33,8 +39,9 @@ public class Player : MonoBehaviour
             FlipFace();
         }
 
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("Vertical") > 0 && isGrounded && (nextJumpTime < Time.timeSinceLevelLoad))
         {
+            nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
             Jump();
         }
     }
@@ -55,5 +62,11 @@ public class Player : MonoBehaviour
     void Jump()
     {
         playerRB.AddForce(new Vector2(0f, jumpSpeed));
+    }
+
+    void OnGroundCheck()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheckPosition.position, groundCheckRadius, groundCheckLayer);
+        playerAnimator.SetBool("isGroundedAnim", isGrounded);
     }
 }

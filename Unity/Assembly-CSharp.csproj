@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\CameraMAnager.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Chests.cs" />
      <Folder Include="Assets" />
@@ -187,6 +188,7 @@
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Tiles\2.5D Tiles\Spring\png\128x128" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Character\Character Source\ai" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Backgrounds\Background\png\Clouds\256x256" />
+     <Folder Include="Assets\Resources" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Backgrounds\New Background ( Update 1.7 )\png\2048x1536\Background" />
      <Folder Include="Assets\PreFabs" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Tiles\2D Tiles ( Update 1.9 )\Winter\256x256" />
@@ -208,6 +210,7 @@
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Water Animation\2D view ( Update 1.9 )\512x512" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Tiles\2D Tiles ( Update 1.9 )\Spring" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Tiles\2.5D Tiles\Spring\eps" />
+     <Folder Include="Assets\Resources\Materials" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Tiles\2D Tiles ( Update 1.9 )\Spring\256x256" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Environments" />
      <Folder Include="Assets\BayatGames\Free Platform Game Assets\Character\Character Source\png\1x" />
