@@ -392,7 +392,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Soru_0: 1739754619011760845
+      Soru_1: 377574427437159883
+      Soru_10: -7246335239677632933
+      Soru_11: 1161551114915015922
+      Soru_2: 7091480748671876134
+      Soru_3: 7532905820858700527
+      Soru_4: -6094147787423923509
+      Soru_5: -7009045347483919955
+      Soru_6: -4593843396129192633
+      Soru_7: -5256875283342475520
+      Soru_8: -2980959439714193635
+      Soru_9: -6256430553086883245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skeleton-walking_22_0: 6655158920117506987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

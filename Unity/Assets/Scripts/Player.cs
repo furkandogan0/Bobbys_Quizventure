@@ -1,29 +1,108 @@
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+
+//public class Player : MonoBehaviour
+//{
+
+//    Rigidbody2D playerRB;
+//    Animator playerAnimator;
+//    public float moveSpeed = 1f;
+//    public float jumpSpeed = 1f, jumpFrequency = 1f, nextJumpTime;
+
+//    bool facingRight = true;
+//    public float maxXPosition; // Karakterin maksimum x pozisyonu
+
+//    public bool isGrounded = false;
+//    public Transform groundCheckPosition;
+//    public float groundCheckRadius;
+//    public LayerMask groundCheckLayer;
+//    // Start is called before the first frame update
+//    void Start()
+//    {
+//        playerRB = GetComponent<Rigidbody2D>();
+//        playerAnimator = GetComponent<Animator>();
+//    }
+
+//    // Update is called once per frame
+//    void Update()
+//    {
+//        HorizontalMove();
+//        OnGroundCheck();
+
+//        if (playerRB.velocity.x < 0 && facingRight)
+//        {
+//            FlipFace();
+//        }
+
+//        else if (playerRB.velocity.x > 0 && !facingRight)
+//        {
+//            FlipFace();
+//        }
+
+//        if (Input.GetAxis("Vertical") > 0 && isGrounded && (nextJumpTime < Time.timeSinceLevelLoad))
+//        {
+//            nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
+//            Jump();
+//        }
+//    }
+//    void HorizontalMove()
+//    {
+//        playerRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, playerRB.velocity.y);
+//        playerAnimator.SetFloat("playerspeed", Mathf.Abs(playerRB.velocity.x));
+//    }
+//    void FlipFace()
+//    {
+//        facingRight = !facingRight;
+//        Vector3 tempLocalScale = transform.localScale;
+//        tempLocalScale.x *= -1;
+//        transform.localScale = tempLocalScale;
+
+//    }
+
+//    void Jump()
+//    {
+//        playerRB.AddForce(new Vector2(0f, jumpSpeed));
+//    }
+
+//    void OnGroundCheck()
+//    {
+//        isGrounded = Physics2D.OverlapCircle(groundCheckPosition.position, groundCheckRadius, groundCheckLayer);
+//        playerAnimator.SetBool("isGroundedAnim", isGrounded);
+//    }
+
+
+
+
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     Rigidbody2D playerRB;
     Animator playerAnimator;
     public float moveSpeed = 1f;
     public float jumpSpeed = 1f, jumpFrequency = 1f, nextJumpTime;
-    
     bool facingRight = true;
+
+    public float minXPosition; // Karakterin minimum x pozisyonu
+    public float maxXPosition; // Karakterin maksimum x pozisyonu
 
     public bool isGrounded = false;
     public Transform groundCheckPosition;
     public float groundCheckRadius;
     public LayerMask groundCheckLayer;
-    // Start is called before the first frame update
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         HorizontalMove();
@@ -44,11 +123,23 @@ public class Player : MonoBehaviour
             nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
             Jump();
         }
+
     }
+
     void HorizontalMove()
     {
-        playerRB.velocity = new Vector2(Input.GetAxis("Horizontal") * moveSpeed, playerRB.velocity.y);
-        playerAnimator.SetFloat("playerspeed", Mathf.Abs(playerRB.velocity.x));
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        if ((horizontalInput < 0 && transform.position.x > minXPosition) || (horizontalInput > 0 && transform.position.x < maxXPosition))
+        {
+            playerRB.velocity = new Vector2(horizontalInput * moveSpeed, playerRB.velocity.y);
+            playerAnimator.SetFloat("playerspeed", Mathf.Abs(playerRB.velocity.x));
+        }
+        else if ((horizontalInput < 0 && transform.position.x <= minXPosition) || (horizontalInput > 0 && transform.position.x >= maxXPosition))
+        {
+            playerRB.velocity = new Vector2(0, playerRB.velocity.y); // Sýnýra ulaþýldýðýnda hareketi durdur
+            playerAnimator.SetFloat("playerspeed", 0);
+        }
     }
     void FlipFace()
     {
@@ -63,10 +154,13 @@ public class Player : MonoBehaviour
     {
         playerRB.AddForce(new Vector2(0f, jumpSpeed));
     }
-
     void OnGroundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheckPosition.position, groundCheckRadius, groundCheckLayer);
         playerAnimator.SetBool("isGroundedAnim", isGrounded);
     }
 }
+
+
+
+
