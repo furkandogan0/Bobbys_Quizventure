@@ -1,25 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Chests : MonoBehaviour
 {
-    public GameObject ekran;
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player")) // Karakter sandığa temas ettiğinde
+ 
+    private void OnCollisionEnter2D(Collision2D collision) { 
+        
+        if (collision.gameObject.CompareTag("Player")) // Karakter sandıktan ayrıldığında
         {
-            ekran.SetActive(true); // Ekranı etkinleştir
-            Time.timeScale = 0f; // Oyun zamanını durdur (isteğe bağlı)
-            // İsteğe bağlı diğer işlemler
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player")) // Karakter sandıktan ayrıldığında
-        {
-            ekran.SetActive(false); // Ekranı devre dışı bırak
-            Time.timeScale = 1f; // Oyun zamanını tekrar başlat (isteğe bağlı)
+            SceneManager.LoadScene("QuestionScreen");
+            // Time.timeScale = 1f; // Oyun zamanını tekrar başlat (isteğe bağlı)
             // İsteğe bağlı diğer işlemler
         }
     }
