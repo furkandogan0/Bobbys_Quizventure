@@ -79,6 +79,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -88,6 +89,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 1f;
     public float jumpSpeed = 1f, jumpFrequency = 1f, nextJumpTime;
     bool facingRight = true;
+    public TMP_Text anahtarSayisiMetni; // UI Text objesini buraya atayın
 
     public float minXPosition; // Karakterin minimum x pozisyonu
     public float maxXPosition; // Karakterin maksimum x pozisyonu
@@ -101,6 +103,7 @@ public class Player : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        anahtarSayisiMetni.text = "0"+"X";
     }
 
     void Update()
@@ -123,6 +126,8 @@ public class Player : MonoBehaviour
             nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
             Jump();
         }
+
+        anahtarSayisiMetni.text = "" + GameManager.instance.kazanilanAnahtarSayisi;
 
     }
 
@@ -159,7 +164,13 @@ public class Player : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheckPosition.position, groundCheckRadius, groundCheckLayer);
         playerAnimator.SetBool("isGroundedAnim", isGrounded);
     }
-    
+
+    //public void GuncelleAnahtarMetni()
+    //{
+    //    // Anahtar sayısını UI Text objesine yazdır
+    //    anahtarSayisiMetni.text = GetComponent<GameManager>().kazanilanAnahtarSayisi.ToString();
+    //}
+
     // void OnCollisionEnter2D(Collision2D collision)
     // {
     //     if (collision.gameObject.CompareTag("Enemy"))
@@ -177,7 +188,7 @@ public class Player : MonoBehaviour
     //         }
     //     }
     // }
-    
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))

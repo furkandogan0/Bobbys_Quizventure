@@ -949,7 +949,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da815c3197722dd4b846d8baab913a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sandikObjeleri: []
   Verim: {fileID: 1586014931}
+  SuankiSoru:
+    Sorutext: 
+    Asikki: 
+    Bsikki: 
+    Csikki: 
+    Dsikki: 
+    Cevap: 
+    Resim: {fileID: 0}
   Sorutexts: {fileID: 228498430}
   Asikkis: {fileID: 1642412286}
   Bsikkis: {fileID: 1882448695}
@@ -973,7 +982,7 @@ MonoBehaviour:
     Asikki: Ankara
     Bsikki: "\u0130stanbul"
     Csikki: Adana
-    Dsikki: "\u0130zmir"
+    Dsikki: Kayseri
     Cevap: a
     Resim: {fileID: 0}
 --- !u!4 &1586014932

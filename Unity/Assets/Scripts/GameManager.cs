@@ -287,11 +287,13 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // Singleton instance
     public GameObject sandik;
+    public int kazanilanAnahtarSayisi = 0;
     
 
     private Vector3 lastCheckpointPosition;
@@ -299,6 +301,12 @@ public class GameManager : MonoBehaviour
     private bool isCheckpointSet = false;
     private Vector3 targetPos;
 
+
+    void Start()
+    {
+        kazanilanAnahtarSayisi = 0;
+        
+    }
     void Awake()
     {
         if (instance == null)
@@ -368,6 +376,9 @@ public class GameManager : MonoBehaviour
             targetPos = lastCheckpointPosition - new Vector3(backwardOffsetX, 0f, 0f); // Sadece X ekseni boyunca geri gitmek için negatif X vektörü kullanýlýyor
             SceneManager.LoadScene("SampleScene");
             SceneManager.sceneLoaded += OnSceneLoadedTrue;
+            kazanilanAnahtarSayisi++;
+            Debug.Log("Toplam Anahtar Sayýsý: " + kazanilanAnahtarSayisi);
+            
 
         }
         else
@@ -404,7 +415,7 @@ public class GameManager : MonoBehaviour
 
 
 
-   
+
 
 }
 
