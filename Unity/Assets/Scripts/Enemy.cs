@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,10 @@ public class Enemy : MonoBehaviour
     private Transform currentPoint;
     public float speed;
     
+    // public Transform top_collision;
+
+    public float health;
+    public float damage;
     
     void Start()
     {
@@ -53,9 +58,32 @@ public class Enemy : MonoBehaviour
         transform.localScale = localScale;
     }
     private void OnDrawGizmos()
-        {
+    {
             Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
             Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
             Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            other.GetComponent<PlayerManager>().GetDamage(damage);
         }
+    }
+
+    // private void CheckCollision()
+    // {
+    //     Collider2D topHit = Physics2D.OverlapCircle(top_collision.position, 0.2f);
+    //
+    //     if (topHit != null)
+    //     {
+    //         if (topHit.gameObject.CompareTag("Player"))
+    //         {
+    //             topHit.gameObject.GetComponent<Rigidbody2D>().velocity =
+    //                 new Vector2(topHit.gameObject.GetComponent<Rigidbody2D>().velocity.x, 7f);
+    //             
+    //         }   
+    //     }
+    // }
 }

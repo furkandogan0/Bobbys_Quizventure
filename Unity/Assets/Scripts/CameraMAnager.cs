@@ -28,7 +28,7 @@ using UnityEngine;
 //{
 //    public Transform target;
 //    public float cameraSpeed;
-//    public float rightLimit; // Sað sýnýr
+//    public float rightLimit; // SaÄŸ sÄ±nÄ±r
 
 //    void Update()
 //    {
@@ -41,7 +41,7 @@ using UnityEngine;
 //            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
 //        }
 
-//        // Karakter sað sýnýrdan fazla hareket etmiþse kamerayý hareket ettirme
+//        // Karakter saÄŸ sÄ±nÄ±rdan fazla hareket etmiÅŸse kamerayÄ± hareket ettirme
 //        if (target.position.x >= rightLimit)
 //        {
 //            transform.position = new Vector3(rightLimit, transform.position.y, transform.position.z);
@@ -60,7 +60,7 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        // Karakterin x pozisyonu, kamera takibini baþlatýr
+        // Karakterin x pozisyonu, kamera takibini baÅŸlatÄ±r
         if (!isFollowing && target.position.x <= transform.position.x)
         {
             isFollowing = true;
@@ -68,14 +68,14 @@ public class CameraManager : MonoBehaviour
 
         if (isFollowing)
         {
-            // Kamera takibi baþladýysa ve karakter x pozisyonu sýnýra ulaþmadýysa takip devam eder
+            // Kamera takibi baÅŸladÄ±ysa ve karakter x pozisyonu sÄ±nÄ±ra ulaÅŸmadÄ±ysa takip devam eder
             if (target.position.x >= maxXPosition)
             {
                 transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
             }
             else
             {
-                // Karakter maksimum x pozisyonunu geçerse kamera sabitlenir
+                // Karakter maksimum x pozisyonunu geÃ§erse kamera sabitlenir
                 transform.position = new Vector3(maxXPosition, transform.position.y, transform.position.z);
             }
         }

@@ -137,7 +137,7 @@ public class Player : MonoBehaviour
         }
         else if ((horizontalInput < 0 && transform.position.x <= minXPosition) || (horizontalInput > 0 && transform.position.x >= maxXPosition))
         {
-            playerRB.velocity = new Vector2(0, playerRB.velocity.y); // S�n�ra ula��ld���nda hareketi durdur
+            playerRB.velocity = new Vector2(0, playerRB.velocity.y); // Sınıra ulaşıldığında hareketi durdur
             playerAnimator.SetFloat("playerspeed", 0);
         }
     }
@@ -158,6 +158,49 @@ public class Player : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheckPosition.position, groundCheckRadius, groundCheckLayer);
         playerAnimator.SetBool("isGroundedAnim", isGrounded);
+    }
+    
+    // void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Enemy"))
+    //     {
+    //         // Düşmanın üstüne çarpıldığında
+    //         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+    //
+    //         if (enemy != null)
+    //         {
+    //             // Düşmanın ölüm fonksiyonunu çağır
+    //             Destroy(collision.gameObject);
+    //
+    //             // Düşmanın üstüne zıplandığında karakteri bir miktar yukarı it
+    //             playerRB.AddForce(new Vector2(0f, jumpSpeed / 2f));
+    //         }
+    //     }
+    // }
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Düşmanın altına çarpıldığında
+            if (IsCollisionBelow(collision))
+            {
+                Destroy(collision.gameObject);
+
+                // Düşmanın altına zıplandığında karakteri bir miktar yukarı it
+                playerRB.AddForce(new Vector2(0f, jumpSpeed / 2f));
+            }
+        }
+    }
+
+    // Düşmanın altına çarpılıp çarpılmadığını kontrol etmek için yardımcı bir fonksiyon
+    bool IsCollisionBelow(Collision2D collision)
+    {
+        // Çarpışmanın normali (çarpışmanın yüzeyine dik olan vektör)
+        Vector2 contactNormal = collision.GetContact(0).normal;
+
+        // Yüzeyin yukarı yönlü olup olmadığını kontrol et
+        return Vector2.Dot(contactNormal, Vector2.up) > 0.5f;
     }
 }
 
