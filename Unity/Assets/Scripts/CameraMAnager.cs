@@ -53,21 +53,24 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     public Transform target;
-    public float cameraSpeed;
+    public float CameraSpeed;
     public float maxXPosition; // Karakterin maksimum x pozisyonu
 
     private bool isFollowing = false;
 
     void Update()
     {
-        // Karakterin x pozisyonu, kamera takibini başlatır
-        if (!isFollowing && target.position.x <= transform.position.x)
-        {
-            isFollowing = true;
-        }
 
-        if (isFollowing)
-        {
+            transform.position = Vector3.Slerp(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z), CameraSpeed);
+        
+        // Karakterin x pozisyonu, kamera takibini başlatır
+        //if (!isFollowing && target.position.x <= transform.position.x)
+        //{
+        //    isFollowing = true;
+        //}
+
+        //if (isFollowing)
+        //{
             // Kamera takibi başladıysa ve karakter x pozisyonu sınıra ulaşmadıysa takip devam eder
             if (target.position.x >= maxXPosition)
             {
@@ -80,6 +83,6 @@ public class CameraManager : MonoBehaviour
             }
         }
     }
-}
+
 
 
