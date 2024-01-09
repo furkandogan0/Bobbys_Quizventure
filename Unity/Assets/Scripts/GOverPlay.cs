@@ -18,6 +18,6 @@ public class GOverPlay : MonoBehaviour
     }
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene");
     }
 }

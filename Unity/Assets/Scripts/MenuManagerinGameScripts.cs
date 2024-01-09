@@ -39,14 +39,14 @@ public class MenuManagerinGameScripts : MonoBehaviour
     public void RePlayButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
 
     }
 
     public void HomeButton()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
 
 
     }

@@ -20,6 +20,11 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void PlayButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene");
     }
+    public void HomeButton()
+    {
+        SceneManager.LoadScene(4);
+    }
+
 }

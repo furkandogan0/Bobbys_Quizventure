@@ -317,6 +317,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+           
         }
         UpdateSandikReference();
     }
@@ -363,6 +364,9 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Player objesi bulunamadý veya 'Player' tag'i atanmamýþ.");
         }
+        
+        
+        
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
@@ -401,6 +405,7 @@ public class GameManager : MonoBehaviour
         }
 
         GameObject sandik = GameObject.FindGameObjectWithTag("Chests");
+        
 
         if (sandik != null)
         {
