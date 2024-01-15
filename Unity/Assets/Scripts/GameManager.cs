@@ -416,6 +416,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("Sandýk objesi bulunamadý.");
         }
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        
+        DataManager.Instance.OpenedChest++;
     }
 
 

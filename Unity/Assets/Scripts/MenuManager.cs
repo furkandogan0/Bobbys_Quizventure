@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public GameObject dataBoard;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,21 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
     public void HomeButton()
     {
         SceneManager.LoadScene(4);
     }
+    
+    public void DataBoardButton()
+    {
+        dataBoard.transform.GetChild(1).GetComponent<Text>().text = "Total Opened Chest : " + DataManager.Instance.totalOpenedChest.ToString();
+        dataBoard.transform.GetChild(2).GetComponent<Text>().text = "Total Enemy Killed : " + DataManager.Instance.totalEnemyKilled.ToString();
+        dataBoard.SetActive(true);
+    }
 
+    public void XButton()
+    {
+        dataBoard.SetActive(false);
+    }
 }

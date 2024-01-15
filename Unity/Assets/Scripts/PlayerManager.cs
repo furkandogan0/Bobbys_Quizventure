@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -24,13 +25,14 @@ public class PlayerManager : MonoBehaviour
 
     public void GetDamage(float damage)
     {
-        if ((health - damage) >= 0)
+        if ((health - damage) >= 10)
         {
             health -= damage;
         }
         else
         {
-            health = 0;
+            health = 10;
+            SceneManager.LoadScene("GameOverScreen");
         }
         slider.value = health;
         AmIDead();

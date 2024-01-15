@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class waterScript : MonoBehaviour
+public class WaterScript : MonoBehaviour
 {
 
     

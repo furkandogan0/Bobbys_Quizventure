@@ -196,10 +196,14 @@ public class Player : MonoBehaviour
             // Düşmanın altına çarpıldığında
             if (IsCollisionBelow(collision))
             {
+                DataManager.Instance.EnemyKilled++;
+                
                 Destroy(collision.gameObject);
-
+                
                 // Düşmanın altına zıplandığında karakteri bir miktar yukarı it
                 playerRB.AddForce(new Vector2(0f, jumpSpeed / 2f));
+
+                
             }
         }
     }
