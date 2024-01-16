@@ -28,11 +28,4 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
-    
-    
-
-    public void XButton()
-    {
-        dataBoard.SetActive(false);
-    }
 }

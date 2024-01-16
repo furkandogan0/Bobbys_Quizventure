@@ -1,0 +1,568 @@
+fileFormatVersion: 2
+guid: 14a75db342294144b934f773dbd49c16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6557884948132049776
+    second: "Yaz\u0131_0"
+  - first:
+      213: -7969433840328705279
+    second: "Yaz\u0131_1"
+  - first:
+      213: 8495587205655063378
+    second: "Yaz\u0131_2"
+  - first:
+      213: 274185149484153461
+    second: "Yaz\u0131_3"
+  - first:
+      213: -2524097820226143689
+    second: "Yaz\u0131_4"
+  - first:
+      213: 4228418861027427025
+    second: "Yaz\u0131_5"
+  - first:
+      213: -5589996703178259725
+    second: "Yaz\u0131_6"
+  - first:
+      213: -6298780076718725817
+    second: "Yaz\u0131_7"
+  - first:
+      213: -4529749447955254349
+    second: "Yaz\u0131_8"
+  - first:
+      213: 5441708358897964042
+    second: "Yaz\u0131_9"
+  - first:
+      213: 3175235068416802134
+    second: "Yaz\u0131_10"
+  - first:
+      213: 6165747934038492659
+    second: "Yaz\u0131_11"
+  - first:
+      213: -5407353655797017116
+    second: "Yaz\u0131_12"
+  - first:
+      213: -6520504791254755566
+    second: "Yaz\u0131_13"
+  - first:
+      213: 3099819363587618832
+    second: "Yaz\u0131_14"
+  - first:
+      213: -3134819370388283153
+    second: "Yaz\u0131_15"
+  - first:
+      213: 7755823523964715904
+    second: "Yaz\u0131_16"
+  - first:
+      213: -5322586218051288051
+    second: "Yaz\u0131_17"
+  - first:
+      213: -1423337993406884218
+    second: "Yaz\u0131_18"
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Yaz\u0131_0"
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 578
+        width: 95
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073ba4b7d99420b50800000000000000
+      internalID: 6557884948132049776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_1"
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 578
+        width: 94
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bfa366522e66190800000000000000
+      internalID: -7969433840328705279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_2"
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 578
+        width: 94
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b6c6f4d8366e570800000000000000
+      internalID: 8495587205655063378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_3"
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 725
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ab0b5d0f91ec300800000000000000
+      internalID: 274185149484153461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_4"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 578
+        width: 95
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a351fd76a98fcd0800000000000000
+      internalID: -2524097820226143689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_5"
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 504
+        width: 95
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d20a1d0d8c5eaa30800000000000000
+      internalID: 4228418861027427025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_6"
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 578
+        width: 96
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f284739d975c62b0800000000000000
+      internalID: -5589996703178259725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_7"
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 235
+        width: 95
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7456fd084ec3698a0800000000000000
+      internalID: -6298780076718725817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_8"
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 399
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3fa1170e81321c0800000000000000
+      internalID: -4529749447955254349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_9"
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 271
+        width: 77
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a041367cbe4d48b40800000000000000
+      internalID: 5441708358897964042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_10"
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 271
+        width: 95
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65db85bb873b01c20800000000000000
+      internalID: 3175235068416802134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_11"
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 271
+        width: 22
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f586f61413219550800000000000000
+      internalID: 6165747934038492659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_12"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 271
+        width: 95
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e51f4bdf7835f4b0800000000000000
+      internalID: -5407353655797017116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_13"
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 271
+        width: 95
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217170180738285a0800000000000000
+      internalID: -6520504791254755566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_14"
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 271
+        width: 94
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0187482a945c40b20800000000000000
+      internalID: 3099819363587618832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_15"
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 271
+        width: 96
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe02ef04462ee74d0800000000000000
+      internalID: -3134819370388283153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_16"
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 271
+        width: 95
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0830986276832ab60800000000000000
+      internalID: 7755823523964715904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_17"
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 271
+        width: 77
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04c9a2f8006226b0800000000000000
+      internalID: -5322586218051288051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Yaz\u0131_18"
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 271
+        width: 94
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6865aabd2a94f3ce0800000000000000
+      internalID: -1423337993406884218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

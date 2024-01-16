@@ -46,7 +46,6 @@ public class MenuManagerinGameScripts : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(4);
-        // DataManager.Instance.SaveData();
         
     }
 }
