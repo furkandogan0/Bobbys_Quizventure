@@ -99,7 +99,8 @@ public class Player : MonoBehaviour
     public Transform groundCheckPosition;
     public float groundCheckRadius;
     public LayerMask groundCheckLayer;
-
+    [SerializeField] private AudioSource JumpEffect;
+ 
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -125,6 +126,7 @@ public class Player : MonoBehaviour
         if (Input.GetAxis("Vertical") > 0 && isGrounded && (nextJumpTime < Time.timeSinceLevelLoad))
         {
             nextJumpTime = Time.timeSinceLevelLoad + jumpFrequency;
+            JumpEffect.Play();
             Jump();
         }
 
