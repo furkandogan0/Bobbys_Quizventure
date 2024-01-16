@@ -417,7 +417,7 @@ public class GameManager : MonoBehaviour
         }
         SceneManager.sceneLoaded -= OnSceneLoaded;
         
-        DataManager.Instance.OpenedChest++;
+        
     }
 
 

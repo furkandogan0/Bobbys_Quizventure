@@ -45,8 +45,8 @@ public class MenuManagerinGameScripts : MonoBehaviour
     public void HomeButton()
     {
         Time.timeScale = 1;
-        DataManager.Instance.SaveData();
         SceneManager.LoadScene(4);
+        // DataManager.Instance.SaveData();
         
     }
 }

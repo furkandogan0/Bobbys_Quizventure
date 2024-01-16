@@ -81,6 +81,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -196,17 +197,14 @@ public class Player : MonoBehaviour
             // Düşmanın altına çarpıldığında
             if (IsCollisionBelow(collision))
             {
-                DataManager.Instance.EnemyKilled++;
-                
                 Destroy(collision.gameObject);
                 
                 // Düşmanın altına zıplandığında karakteri bir miktar yukarı it
-                playerRB.AddForce(new Vector2(0f, jumpSpeed / 2f));
-
-                
+                playerRB.AddForce(new Vector2(0f, jumpSpeed / 2f)); 
             }
         }
     }
+    
 
     // Düşmanın altına çarpılıp çarpılmadığını kontrol etmek için yardımcı bir fonksiyon
     bool IsCollisionBelow(Collision2D collision)

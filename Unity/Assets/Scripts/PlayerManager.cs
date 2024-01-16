@@ -23,6 +23,15 @@ public class PlayerManager : MonoBehaviour
         
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Saw"))
+        {
+            AmIDead();
+            SceneManager.LoadScene("GameOverScreen");
+        }
+    }
+
     public void GetDamage(float damage)
     {
         if ((health - damage) >= 10)
