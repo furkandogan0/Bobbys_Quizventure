@@ -284,7 +284,7 @@
 //}
 
 
-
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -321,6 +321,18 @@ public class GameManager : MonoBehaviour
         }
         UpdateSandikReference();
     }
+
+    void Update()
+    {
+        if (kazanilanAnahtarSayisi>=3)
+        {
+            SceneManager.LoadScene("WinScene");
+        }
+    }
+    
+    
+    
+    
 
     void UpdateSandikReference()
     {
@@ -384,6 +396,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("Toplam Anahtar Sayýsý: " + kazanilanAnahtarSayisi);
             
 
+            
+
         }
         else
         {
@@ -405,12 +419,24 @@ public class GameManager : MonoBehaviour
         }
 
         GameObject sandik = GameObject.FindGameObjectWithTag("Chests");
+        GameObject sandik1 = GameObject.FindGameObjectWithTag("Chestss");
+        GameObject sandik2 = GameObject.FindGameObjectWithTag("Chestsss");
         
 
         if (sandik != null)
         {
             Destroy(sandik); // Sandýk objesini yok et
         }
+        if (kazanilanAnahtarSayisi>=2)
+        {
+            Destroy(sandik1); // Sandýk objesini yok et
+        }
+        if (kazanilanAnahtarSayisi>=3)
+        {
+            Destroy(sandik2); // Sandýk objesini yok et
+            
+        }
+
         else
         {
             Debug.Log("Sandýk objesi bulunamadý.");

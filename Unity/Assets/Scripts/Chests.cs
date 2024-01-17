@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Chests : MonoBehaviour
 {
     Animator chestAnimator;
-    
+    [SerializeField] private SceneAsset scene;
     [SerializeField] private AudioSource ChestEffect;
 
 
@@ -31,6 +32,6 @@ public class Chests : MonoBehaviour
 
     private void sahne()
     {
-        SceneManager.LoadScene("QuestionScreen");
+        SceneManager.LoadScene(scene.name);
     }
 }

@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
 {
     public float health;
     bool dead = false;
+    [SerializeField] private AudioSource DamageEffect;
 
     public Slider slider;
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class PlayerManager : MonoBehaviour
     {
         if ((health - damage) >= 10)
         {
+            DamageEffect.Play();
             health -= damage;
         }
         else

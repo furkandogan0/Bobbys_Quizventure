@@ -20,5 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuScenes.unity
     guid: ba0c1dc19c15f0e4e8aaac57c99ae4d3
+  - enabled: 1
+    path: Assets/Scenes/Question2Screen.unity
+    guid: 4c0a3c33deef8224ba3ba28f7b2e57a3
+  - enabled: 1
+    path: Assets/Scenes/Question3Screen.unity
+    guid: c339a875ffb988e49a142d3cd8adae88
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 8367b25f8ea3bed48805e4ae136e4b82
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

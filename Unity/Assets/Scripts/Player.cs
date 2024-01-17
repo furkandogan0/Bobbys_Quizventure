@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundCheckLayer;
     [SerializeField] private AudioSource JumpEffect;
+    
  
     void Start()
     {

@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Chests
   - Saw
+  - Chestss
+  - Chestsss
   layers:
   - Default
   - TransparentFX

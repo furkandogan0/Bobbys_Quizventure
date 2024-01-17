@@ -10,7 +10,7 @@
 //    public GameObject sandikObjesi;
 //    public Veriler Verim;
 //    public Soru SuankiSoru;
-//    public TMP_Text Sorutexts; // TextMeshPro için TMP_Text kullandýk
+//    public TMP_Text Sorutexts; // TextMeshPro iï¿½in TMP_Text kullandï¿½k
 //    public TMP_Text Asikkis;
 //    public TMP_Text Bsikkis;
 //    public TMP_Text Csikkis;
@@ -59,7 +59,7 @@
 //        }
 //        else
 //        {
-//            Debug.Log("Yanlýþ");
+//            Debug.Log("Yanlï¿½ï¿½");
 //            Soruver();
 //            GameManager.instance.ReturnToLastCheckpoint();
 //        }
@@ -73,7 +73,7 @@ using UnityEngine.UI;
 
 public class Yonetici : MonoBehaviour
 {
-    public List<GameObject> sandikObjeleri; // Birden fazla sandýk objesini buraya atayýn
+    public List<GameObject> sandikObjeleri; // Birden fazla sandï¿½k objesini buraya atayï¿½n
     
 
     public Veriler Verim;
@@ -84,6 +84,7 @@ public class Yonetici : MonoBehaviour
     public TMP_Text Csikkis;
     public TMP_Text Dsikkis;
     public Image Resims;
+   
     
 
 
@@ -116,7 +117,6 @@ public class Yonetici : MonoBehaviour
         if (sik == SuankiSoru.Cevap)
         {
             Debug.Log("Tebrikler");
-
             Soruver();
             GameManager.instance.ReturnToLastCheckpointTrue();
             
@@ -129,7 +129,7 @@ public class Yonetici : MonoBehaviour
         }
         else
         {
-            Debug.Log("Yanlýþ");
+            Debug.Log("Yanlï¿½ï¿½");
             Soruver();
             GameManager.instance.ReturnToLastCheckpoint();
         }
